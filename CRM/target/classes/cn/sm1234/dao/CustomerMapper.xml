@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件存放CRUD的sql语句 -->
+<mapper namespace="cn.sm1234.dao.CustomerMapper">
+	
+	<insert id="save" parameterType="cn.sm1234.domain.Customer">
+		INSERT INTO ssm.customer 
+			(
+			NAME, 
+			gender, 
+			telephone, 
+			address
+			)
+			VALUES
+			( 
+			#{name}, 
+			#{gender}, 
+			#{telephone}, 
+			#{address}
+			)
+	</insert>
+	
+	<select id="findAll" resultType="customer">
+		SELECT 	id, 
+			NAME, 
+			gender, 
+			telephone, 
+			address
+			FROM 
+			ssm.customer 
+	</select>
+	
+	<select id="findById" resultType="customer">
+		SELECT 	id, 
+			NAME, 
+			gender, 
+			telephone, 
+			address
+			FROM 
+			ssm.customer 
+			where id = #{value}
+	</select>
+	
+	<update id="update" parameterType="customer">
+		UPDATE ssm.customer 
+			SET
+			NAME = #{name} , 
+			gender = #{gender} , 
+			telephone = #{telephone} , 
+			address = #{address}
+			WHERE
+			id = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM ssm.customer 
+			WHERE
+			id = #{value}
+	</delete>
+	
+</mapper>

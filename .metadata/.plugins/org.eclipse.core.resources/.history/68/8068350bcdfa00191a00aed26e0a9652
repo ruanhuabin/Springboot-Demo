@@ -1,0 +1,18 @@
+package xdclass_websocket;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+
+//springboot启动类
+@ComponentScan(basePackages="xdclass_websocket")
+@SpringBootApplication
+public class Application {
+
+	public static void main(String [] args){
+		SpringApplication.run(Application.class);
+	}
+	
+	
+}

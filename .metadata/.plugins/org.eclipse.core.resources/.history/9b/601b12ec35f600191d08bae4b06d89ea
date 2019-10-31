@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+</head>
+<body>
+
+<div style="width:100px;height:100px;border:1px solid red">
+
+<form th:action="@{~/customer/upload}" enctype="multipart/form-data" method="post">
+	<input type="hidden" name="id"/>
+	描述信息：<input type="text" name="description" /><br/>
+	选择文件：<input type="file" name="file" />
+	<input type="submit" value="提交"/>
+</form>
+
+</div>
+</body>
+</html>

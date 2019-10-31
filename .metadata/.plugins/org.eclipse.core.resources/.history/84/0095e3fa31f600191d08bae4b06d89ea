@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>提示 页面</title>
+</head>
+<body>
+操作成功
+
+<div>
+<span th:text="${cust}"></span>
+</div>
+${cust}
+</body>
+</html>
